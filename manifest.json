@@ -1,7 +1,7 @@
 {
   "id": "automatic-file-icons",
   "name": "Automatic File Icons",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minAppVersion": "1.13.0",
   "description": "Show icons for open and closed folders, notes and other files in the file explorer, with colors for dark and light themes, the accent color or your own colors.",
   "author": "Philipp Reichelt",

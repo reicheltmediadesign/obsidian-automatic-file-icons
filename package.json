@@ -1,6 +1,6 @@
 {
   "name": "automatic-file-icons",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Show icons for open and closed folders, notes and other files in the file explorer.",
   "main": "main.js",
   "private": true,
