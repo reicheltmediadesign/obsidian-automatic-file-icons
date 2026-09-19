@@ -7,13 +7,15 @@ export interface PluginSettings {
   openFolderIcons: boolean;
   noteIcons: boolean;
   otherFileIcons: boolean;
+  /** Folder icons take the color assigned with the Colored File Names plugin. */
+  colorizedFolders: boolean;
   colorMode: ColorMode;
   folderColor: string;
   noteColor: string;
   otherFileColor: string;
 }
 
-const TOGGLE_KEYS = ["folderIcons", "openFolderIcons", "noteIcons", "otherFileIcons"] as const;
+const TOGGLE_KEYS = ["folderIcons", "openFolderIcons", "noteIcons", "otherFileIcons", "colorizedFolders"] as const;
 const COLOR_KEYS = ["folderColor", "noteColor", "otherFileColor"] as const;
 
 export type ToggleKey = (typeof TOGGLE_KEYS)[number];
@@ -27,6 +29,7 @@ export function defaultSettings(): PluginSettings {
     openFolderIcons: true,
     noteIcons: true,
     otherFileIcons: true,
+    colorizedFolders: true,
     colorMode: "auto",
     folderColor: "#e2b86b",
     noteColor: "#a9b3c2",

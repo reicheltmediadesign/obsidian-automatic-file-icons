@@ -8,6 +8,7 @@ Show icons in front of folders and files in the file explorer: open and closed f
 - **Note icons**: Markdown notes show a page with a folded corner.
 - **Other file icons**: all other files, such as PDF, canvas, images or scripts, show a page with a code symbol.
 - **Color modes**: colors tuned for dark or light themes, switching with the theme automatically, your accent color, or custom colors.
+- **Works with Colored File Names**: folders colored with the Colored File Names plugin show their icon in that color.
 - **Lightweight**: no changes to the file explorer itself, the icons are drawn with CSS only.
 
 ## Settings
@@ -31,6 +32,10 @@ Show icons in front of folders and files in the file explorer: open and closed f
 | Accent color  | Folders in the accent color, files in a lighter shade of it.             |
 | Custom colors | Pick a color for folders, notes and other files.                         |
 
+| Setting                        | Description                                                                                          |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Colors from Colored File Names | Folders colored with the Colored File Names plugin show their icon in that color instead of the folder color. On by default. |
+
 ## Styling with CSS snippets
 
 The colors are available as `--afi-folder-color`, `--afi-note-color` and `--afi-file-color`, the icon size and the gap to the name as `--afi-icon-size` and `--afi-icon-gap`:
@@ -39,15 +44,6 @@ The colors are available as `--afi-folder-color`, `--afi-note-color` and `--afi-
 body {
   --afi-icon-size: 1.25em;
 }
-```
-
-## Development
-
-```powershell
-npm install
-npm run dev     # rebuilds main.js on every change
-npm run lint
-npm run build
 ```
 
 ## Credits

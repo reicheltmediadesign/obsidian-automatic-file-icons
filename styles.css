@@ -2,6 +2,8 @@
  *
  * The body gets .afi-folders, .afi-open-folders, .afi-notes and .afi-files
  * for the enabled icon types and .afi-mode-<mode> for the color mode.
+ * With .afi-colorized-folders, folders colored by Colored File Names
+ * (.cfn-colored with --cfn-color) use that color for their icon.
  * Colors are available as --afi-folder-color, --afi-note-color and
  * --afi-file-color; in custom mode they are set inline on the body.
  *
@@ -70,4 +72,9 @@ body.afi-notes .nav-files-container .nav-file-title[data-path$=".md" i] .nav-fil
 body.afi-files .nav-files-container .nav-file-title:not([data-path$=".md" i]) .nav-file-title-content::before {
   --afi-icon: var(--afi-icon-file);
   --afi-color: var(--afi-file-color);
+}
+
+/* Colored File Names */
+body.afi-colorized-folders .nav-files-container .nav-folder.cfn-colored:not(.mod-root) > .nav-folder-title .nav-folder-title-content::before {
+  --afi-color: var(--cfn-color);
 }

@@ -3,7 +3,7 @@ import { COLOR_MODES, defaultSettings, parseSettings, type PluginSettings } from
 import { AutomaticFileIconsSettingTab } from "./settings/settings-tab";
 
 const MODE_CLASSES = COLOR_MODES.map((mode) => `afi-mode-${mode}`);
-const ALL_CLASSES = ["afi-folders", "afi-open-folders", "afi-notes", "afi-files", ...MODE_CLASSES];
+const ALL_CLASSES = ["afi-folders", "afi-open-folders", "afi-notes", "afi-files", "afi-colorized-folders", ...MODE_CLASSES];
 const COLOR_PROPS = ["--afi-folder-color", "--afi-note-color", "--afi-file-color"];
 
 export default class AutomaticFileIconsPlugin extends Plugin {
@@ -50,6 +50,7 @@ export default class AutomaticFileIconsPlugin extends Plugin {
     body.toggleClass("afi-open-folders", settings.folderIcons && settings.openFolderIcons);
     body.toggleClass("afi-notes", settings.noteIcons);
     body.toggleClass("afi-files", settings.otherFileIcons);
+    body.toggleClass("afi-colorized-folders", settings.folderIcons && settings.colorizedFolders);
     body.addClass(`afi-mode-${settings.colorMode}`);
 
     const custom = settings.colorMode === "custom";

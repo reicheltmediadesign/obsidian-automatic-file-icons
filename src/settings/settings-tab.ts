@@ -74,6 +74,12 @@ export class AutomaticFileIconsSettingTab extends PluginSettingTab {
             visible: () => custom() && settings.otherFileIcons,
             control: { type: "color", key: "otherFileColor" },
           },
+          {
+            name: "Colors from Colored File Names",
+            desc: "Folders colored with the Colored File Names plugin show their icon in that color instead of the folder color. Has no effect if the plugin is not installed.",
+            visible: () => settings.folderIcons,
+            control: { type: "toggle", key: "colorizedFolders" },
+          },
         ],
       },
     ];
